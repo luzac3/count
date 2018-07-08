@@ -10,7 +10,7 @@ window.onload = function(){
 
     for(let i = 1; i <= 100; i++){
         // 追加する要素を作成
-        const add_element = document.createElement("p");
+        const add_element = document.createElement("li");
 
         // 3と5両方の倍数のとき
         if(i % 3 == 0 && i % 5 == 0){
@@ -39,5 +39,6 @@ window.onload = function(){
         fragment.appendChild(add_element);
     }
 
+    // 書き込み
     display.appendChild(fragment);
 }
