@@ -1,39 +1,43 @@
-function calc(){
+window.onload = function(){
     // 要素を追加する位置を取得
-    const display = document.getElementbyId("display");
+    const display = document.getElementById("display");
 
-    // 追加する要素を作成
-    const add_element = document.createElement("p");
+    // Fragmentノードを作成
+    const fragment = document.createDocumentFragment();
 
     // 数字を格納する変数を宣言
     let number_set = "";
 
     for(let i = 1; i <= 100; i++){
+        // 追加する要素を作成
+        const add_element = document.createElement("p");
+
         // 3と5両方の倍数のとき
         if(i % 3 == 0 && i % 5 == 0){
             // FizzBuzz
             str = "FizzBuzz";
-        }
-
-        if(i % 3 == 0 || i % 5 == 0){
-            // 3の倍数のとき
-            if(i % 3 == 0){
-                // Fizz
-                str = "Fizz";
-            }
-            // 5の倍数のとき
-            if(i % 5 == 0){
-                // Buzz
-                str = "Buzz";
-            }
+        // 3の倍数のとき
+        }else if(i % 3 == 0){
+            // Fizz
+            str = "Fizz";
+        // 5の倍数のとき
+        }else if(i % 5 == 0){
+            // Buzz
+            str = "Buzz";
+        // 加工なし
         }else{
-            // 加工なし
             str = i;
         }
+
         // 要素にテキストを設定
-        add_element.textContent(str);
+        add_element.textContent = str;
 
         // 要素を追加
-        add_element.lastElementChild(add_element);
+        display.appendChild(add_element);
+
+        // Fragmentノードに追加
+        fragment.appendChild(add_element);
     }
+
+    display.appendChild(fragment);
 }
