@@ -8,20 +8,26 @@ function calc(){
     // 数字を格納する変数を宣言
     let number_set = "";
 
-    for(let i = 0; i< 100; i++){
+    for(let i = 1; i <= 100; i++){
+        // 3と5両方の倍数のとき
         if(i % 3 == 0 && i % 5 == 0){
-            //
+            // FizzBuzz
+            str = "FizzBuzz";
         }
 
         if(i % 3 == 0 || i % 5 == 0){
+            // 3の倍数のとき
             if(i % 3 == 0){
-                //
+                // Fizz
+                str = "Fizz";
             }
+            // 5の倍数のとき
             if(i % 5 == 0){
-                //
+                // Buzz
+                str = "Buzz";
             }
         }else{
-            //
+            // 加工なし
             str = i;
         }
         // 要素にテキストを設定
