@@ -14,17 +14,13 @@ window.onload = function(){
 
         // 3と5両方の倍数のとき
         if(i % 3 == 0 && i % 5 == 0){
-            // FizzBuzz
             str = "FizzBuzz";
         // 3の倍数のとき
         }else if(i % 3 == 0){
-            // Fizz
             str = "Fizz";
         // 5の倍数のとき
         }else if(i % 5 == 0){
-            // Buzz
             str = "Buzz";
-        // 加工なし
         }else{
             str = i;
         }
